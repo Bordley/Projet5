@@ -1,17 +1,34 @@
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+{/* il s'agit ici de toutes les couleurs et texts qui 
+ont été utiliser , ces couleurs sont apres appelées dans les fichiers*/}
+const pallete = [
+  {   // orange
+      text: '#f97316', 
+      bgColor: opacity=> `rgba(251, 146, 60, ${opacity})`
+  },
+  {   // dark gray
+      text: '#334155', 
+      bgColor: opacity=> `rgba(30, 41, 59, ${opacity})`,
+  },
+  {   // purple
+      text: '#7c3aed', 
+      bgColor: opacity=> `rgba(167, 139, 250, ${opacity})`,
+  },
+  {   // green
+      text: '#009950', 
+      bgColor: opacity=> `rgba(0, 179, 89, ${opacity})`,
+  },
+  {
+      // teal
+      text: '#14b8a6',
+      bgColor: opacity=> `rgba(45, 212, 191, ${opacity})`
+  },
+  {
+      // red
+      text: '#dc2626',
+      bgColor: opacity=> `rgba(248, 113, 113, ${opacity})`
+  }
 
-const Stack = createNativeStackNavigator();
-
-import { View, Text } from 'react-native'
-import React from 'react'
-
-export default function navigation() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  )
+]
+export const themeColors = {
+  ...pallete[0]
 }
